@@ -2,9 +2,9 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace Itmo.ObjectOrientedProgramming.Lab1.RouteAndSections;
-
 using System.Collections.Generic;
+
+namespace Itmo.ObjectOrientedProgramming.Lab1.RouteAndSections;
 
 /// <summary>
 /// Represents the whole route of the train.
