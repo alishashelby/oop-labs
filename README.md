@@ -31,3 +31,32 @@ This project implements a constructor for educational programs to practice *OOP 
   - Cloned entities keep a reference to the source ID.
   - Subjects must total exactly 100 points.
 - Unit tests cover cloning, validation, and repository logic.
+
+## Lab 3 - Corporate Messaging System
+
+This project implements a corporate message distribution system to practice *OOP principles, GRASP, SOLID, structural and creational design patterns, mocking*.
+
+### Key Features:
+- **Core entities**:
+  - **Message** – title, body, importance level.
+  - **Topic** – name, list of recipients, sends messages to all recipients.
+  - **Recipient types**:
+    - **User** – corporate user with a message inbox and message status tracking (read/unread).
+    - **Messenger** – sends messages to an external messenger.
+    - **Display** – outputs messages to a physical display (supports console and file output).
+    - **Group** – composite recipient that forwards messages to multiple recipients.
+- **Message handling**:
+  - Filters per recipient based on importance level.
+  - Logging of incoming messages with testable mock implementations.
+- **User logic**:
+  - Track message status (read/unread).
+  - Change status only if the message is unread; invalid actions return an error.
+- **Display driver**:
+  - Supports clearing display, setting text color, and writing text output.
+- **Testability**:
+  - Messenger and display implementations are isolated, mockable, and have no direct dependency on message delivery logic.
+  - Structural patterns ensure clean integrations with external systems.
+- **Unit Tests**:
+  - Check message status changes and invalid transitions.
+  - Verify filtering, logging, and correct messenger/display behavior.
+  - Handle multiple recipients with importance filters.
