@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>Itmo.ObjectOrientedProgramming.Lab4</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Moq" Version="4.20.2" />
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.0" />
+    </ItemGroup>
+
+</Project>
