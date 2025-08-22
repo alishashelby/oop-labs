@@ -5,18 +5,18 @@
 This project implements a train route simulator to practice OOP principles: *encapsulation, composition, and polymorphism*.
 
 ### Key Features:
-- Train model with mass, speed, acceleration, max force, and calculation of travel time for a given distance using iterative physics-based simulation.
+- Train model with mass, speed, acceleration, max force, and calculation of travel time for a given distance using iterative physics-based simulation;
 - **Route sections**:
     - **Regular magnetic tracks** – trains travel a fixed distance.
     - **Powered tracks** – apply positive or negative force along the path.
     - **Stations** – handle stop/start operations with speed limits and passenger boarding times.
-- Route logic that simulates passing through multiple sections and validates successful completion, including safe stop at the end.
-- No exceptions for business logic failures – results indicate success or failure with total travel time.
+- Route logic that simulates passing through multiple sections and validates successful completion, including safe stop at the end;
+- No exceptions for business logic failures – results indicate success or failure with total travel time;
 - Unit tests cover core logic.
 
 ## Lab 2 - Educational Program Constructor
 
-This project implements a constructor for educational programs to practice *OOP principles, SOLID, GRASP, and creational design patterns*.
+This project implements a constructor for educational programs to practice *OOP principles, GRASP, SOLID, and creational design patterns*.
 
 ### Key Features:
 - **Domain model** with:
@@ -27,9 +27,9 @@ This project implements a constructor for educational programs to practice *OOP 
   - **Educational programs** – ID, name, list of subjects assigned to semesters, and a program manager.
 - **Repositories**: In-memory storage for entities with ID-based search.
 - **Validation rules**:
-  - Editing by non-authors returns an error.
-  - Cloned entities keep a reference to the source ID.
-  - Subjects must total exactly 100 points.
+  - Editing by non-authors returns an error;
+  - Cloned entities keep a reference to the source ID;
+  - Subjects must total exactly 100 points;
 - Unit tests cover cloning, validation, and repository logic.
 
 ## Lab 3 - Corporate Messaging System
@@ -46,19 +46,19 @@ This project implements a corporate message distribution system to practice *OOP
     - **Display** – outputs messages to a physical display (supports console and file output).
     - **Group** – composite recipient that forwards messages to multiple recipients.
 - **Message handling**:
-  - Filters per recipient based on importance level.
-  - Logging of incoming messages with testable mock implementations.
+  - Filters per recipient based on importance level;
+  - Logging of incoming messages with testable mock implementations;
 - **User logic**:
-  - Track message status (read/unread).
-  - Change status only if the message is unread; invalid actions return an error.
+  - Track message status (read/unread);
+  - Change status only if the message is unread; invalid actions return an error;
 - **Display driver**:
-  - Supports clearing display, setting text color, and writing text output.
+  - Supports clearing display, setting text color, and writing text output;
 - **Testability**:
-  - Messenger and display implementations are isolated, mockable, and have no direct dependency on message delivery logic.
-  - Structural patterns ensure clean integrations with external systems.
+  - Messenger and display implementations are isolated, mockable, and have no direct dependency on message delivery logic;
+  - Structural patterns ensure clean integrations with external systems;
 - **Unit Tests**:
-  - Check message status changes and invalid transitions.
-  - Verify filtering, logging, and correct messenger/display behavior.
+  - Check message status changes and invalid transitions;
+  - Verify filtering, logging, and correct messenger/display behavior;
   - Handle multiple recipients with importance filters.
 
 ## Lab 4 - File System Manager
@@ -66,12 +66,12 @@ This project implements a corporate message distribution system to practice *OOP
 This project implements a console-based file system manager to practice *SOLID principles and design patterns (behavioral, structural, and creational)*.
 
 ### Key Features:
-- File system operations: navigate (absolute/relative paths), view directory and file contents, move, copy, delete, and rename files.
-- Console interface with command flags and extensible command parsing.
-- Local file system integration, with logic decoupled from console handling and file system specifics.
-- Configurable directory tree output with adjustable depth and symbols.
-- Support for multiple file systems (e.g., switching drives).
-- Collision handling for file names.
+- File system operations: navigate (absolute/relative paths), view directory and file contents, move, copy, delete, and rename files;
+- Console interface with command flags and extensible command parsing;
+- Local file system integration, with logic decoupled from console handling and file system specifics;
+- Configurable directory tree output with adjustable depth and symbols;
+- Support for multiple file systems (e.g., switching drives);
+- Collision handling for file names;
 - Unit Tests: validate the command parser to ensure commands create correct objects with correct arguments.
 
 ### Command Semantics
@@ -99,3 +99,27 @@ This project implements a console-based file system manager to practice *SOLID p
   - Path – Relative or absolute path to the file to be renamed.
   - Name – New name for the file.
 
+## Lab 5 - ATM Banking System
+
+This project implements an ATM banking system to practice *multi-layered architectures, dependency injection and design patterns*.
+
+### Key Features
+- **Functional Requirements**:
+  - Balance viewing for authenticated users;
+  - Cash withdrawal with balance validation;
+  - Cash deposit with positive amount validation;
+  - Transaction history with date/time and type tracking;
+  - Dual-mode operation (User/Admin) with separate authentication flows;
+- **Architectural Implementation**:
+  - **Hexagonal Architecture**;
+  - **Dependency Injection** implemented via *Microsoft.Extensions.DependencyInjection*;
+  - Database: *PostgreSQL*;
+- **Test Cases**:
+  - Withdraw (ensure balance updates correctly when sufficient, return error when insufficient);
+  - Deposit (ensure balance increases correctly);
+  - Tests validate business logic only, independent of DB or console, using mocked repositories;
+- **Console Interface**:
+  - Interactive menu system using *Spectre.Console*;
+  - User-friendly prompts and formatted output;
+  - Color-coded messages for success/error states;
+  - Hierarchical menu navigation.
