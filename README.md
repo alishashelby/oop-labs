@@ -60,3 +60,42 @@ This project implements a corporate message distribution system to practice *OOP
   - Check message status changes and invalid transitions.
   - Verify filtering, logging, and correct messenger/display behavior.
   - Handle multiple recipients with importance filters.
+
+## Lab 4 - File System Manager
+
+This project implements a console-based file system manager to practice *SOLID principles and design patterns (behavioral, structural, and creational)*.
+
+### Key Features:
+- File system operations: navigate (absolute/relative paths), view directory and file contents, move, copy, delete, and rename files.
+- Console interface with command flags and extensible command parsing.
+- Local file system integration, with logic decoupled from console handling and file system specifics.
+- Configurable directory tree output with adjustable depth and symbols.
+- Support for multiple file systems (e.g., switching drives).
+- Collision handling for file names.
+- Unit Tests: validate the command parser to ensure commands create correct objects with correct arguments.
+
+### Command Semantics
+- **connect [Address] [-m Mode]**
+  - Address – Absolute path to the file system being connected.
+  - Mode – File system mode (only local mode local is required to be implemented).
+- **disconnect**
+  - Disconnects from the file system.
+- **tree goto [Path]**
+  - Path – Relative or absolute path to the directory in the file system.
+- **tree list {-d Depth}**
+  - Depth – Parameter that specifies the depth of the directory tree; must be specified with the -d flag.
+- **file show [Path] {-m Mode}**
+  - Path – Relative or absolute path to the file.
+  - Mode – File output mode (only console output mode console is required to be implemented).
+- **file move [SourcePath] [DestinationPath]**
+  - SourcePath – Relative or absolute path to the file to be moved.
+  - DestinationPath – Relative or absolute path to the directory where the file should be moved.
+- **file copy [SourcePath] [DestinationPath]**
+  - SourcePath – Relative or absolute path to the file to be copied.
+  - DestinationPath – Relative or absolute path to the directory where the file should be copied.
+- **file delete [Path]**
+  - Path – Relative or absolute path to the file to be deleted.
+- **file rename [Path] [Name]**
+  - Path – Relative or absolute path to the file to be renamed.
+  - Name – New name for the file.
+
